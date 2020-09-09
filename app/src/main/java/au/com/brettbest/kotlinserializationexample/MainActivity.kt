@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.setContent
 import androidx.ui.tooling.preview.Preview
 import au.com.brettbest.kotlinserializationexample.ui.KotlinSerializationExampleTheme
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,3 +38,6 @@ fun DefaultPreview() {
         Greeting("Android")
     }
 }
+
+@Serializable
+data class Project(val name: String, val language: String)
